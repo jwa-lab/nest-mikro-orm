@@ -1,4 +1,4 @@
-import { MikroOrmModuleOptions as Options } from '@mikro-orm/nestjs';
+import { Options } from '@mikro-orm/core';
 
 const config: Options = {
   type: 'postgresql',
@@ -9,8 +9,9 @@ const config: Options = {
   dbName: 'nest-mikro-orm',
   entities: ['dist/**/entity-schemas/**/*.js'],
   entitiesTs: ['src/**/entity-schemas/**/*.ts'],
-  registerRequestContext: true,
   implicitTransactions: false,
+  allowGlobalContext: false,
+  debug: false,
 };
 
 export default config;

@@ -4,7 +4,7 @@
   "scripts": {
     "start": "nest start",
     "start:dev": "nest start --watch",
-    "test:e2e": "jest --config ./test/jest-e2e.json --detectOpenHandles --runInBand"
+    "test:e2e": "jest --config ./test/jest-e2e.json --detectOpenHandles --runInBand --verbose"
   },
   "dependencies": {
     "@mikro-orm/cli": "5.1.2",
