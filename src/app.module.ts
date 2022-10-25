@@ -5,7 +5,10 @@ import config from './mikro-orm.config';
 
 @Module({
   imports: [
-    MikroOrmModule.forRoot({ ...config, registerRequestContext: true }),
+    MikroOrmModule.forRoot({
+      ...config,
+      registerRequestContext: process.env.NODE_ENV !== 'test',
+    }),
   ],
   controllers: [AppController],
   providers: [],

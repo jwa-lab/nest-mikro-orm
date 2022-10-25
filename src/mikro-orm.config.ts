@@ -10,8 +10,8 @@ const config: Options = {
   entities: ['dist/**/entity-schemas/**/*.js'],
   entitiesTs: ['src/**/entity-schemas/**/*.ts'],
   implicitTransactions: false,
-  allowGlobalContext: false,
-  debug: false,
+  allowGlobalContext: process.env.NODE_ENV === 'test',
+  debug: true,
 };
 
 export default config;
